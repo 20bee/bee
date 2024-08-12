@@ -1,0 +1,33 @@
+Host name S1
+line console 0
+password cisco
+Login 
+End
+
+En
+Conf ter
+Enable secret cisco
+Exit
+
+Line vty 0 15
+password cisco
+Login
+End
+
+Service password-encryption
+
+Banner motd ##
+Do write
+
+En
+Conf t 
+Vland 10
+Switchport  mode access 
+Switchport access vland10
+
+En
+Conf t
+Int g0/0/1.10
+Encapsulation dot1q 10
+Ip add 192 - 255
+Exit
